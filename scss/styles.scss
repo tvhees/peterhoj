@@ -121,10 +121,6 @@ h1 {
   &:nth-child(2){
     @include vennCircle(($xOffset, 0.59 * $radius + $yOffset));
     background-color: $colorTwo;
-
-    &:hover {
-      background-image: url('../../img/work/turnbull-modhi-2017.jpg')
-    }
   }
   &:nth-child(3){
     @include vennCircle((0.36 * $radius + $xOffset, 1.71 * $radius + $yOffset));

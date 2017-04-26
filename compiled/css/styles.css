@@ -102,8 +102,6 @@ h1 {
     transform: translate(54px, 122px) scale(1.56); }
     .venn-circle:nth-child(2):hover img {
       opacity: 1; }
-  .venn-circle:nth-child(2):hover {
-    background-image: url("../../img/work/turnbull-modhi-2017.jpg"); }
 
 .venn-circle:nth-child(3) {
   height: 200px;
