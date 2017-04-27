@@ -21,7 +21,7 @@ gulp.task('build-dist', function (callback) {
     runSequence(
         'build-clean',
         ['build-sass', 'read-images'],
-        ['images-copy', 'fonts-copy', 'build-javascript', 'html'],
+        ['images-copy', 'fonts-copy', 'media-copy', 'build-javascript', 'html'],
         ['dist-copy'],
         callback
     )
@@ -54,7 +54,7 @@ gulp.task('images-copy', function () {
 });
 
 gulp.task('fonts-copy', function(){
-    return gulp.src('./fonts/*.ttf')
+    return gulp.src('./fonts/*.{ttf,woff,eot,svg}')
         .pipe(gulp.dest('./compiled/fonts'))
 });
 
