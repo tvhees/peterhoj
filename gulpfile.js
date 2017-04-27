@@ -12,7 +12,7 @@ gulp.task('build', function (callback) {
     runSequence(
         'build-clean',
         ['build-sass', 'read-images'],
-        ['images-copy', 'fonts-copy', 'build-javascript', 'html'],
+        ['images-copy', 'fonts-copy', 'media-copy', 'build-javascript', 'html'],
         callback
     );
 });
@@ -56,7 +56,12 @@ gulp.task('images-copy', function () {
 gulp.task('fonts-copy', function(){
     return gulp.src('./fonts/*.ttf')
         .pipe(gulp.dest('./compiled/fonts'))
-})
+});
+
+gulp.task('media-copy', function(){
+    return gulp.src('./media/*.*')
+        .pipe(gulp.dest('./compiled/media'))
+});
 
 gulp.task('build-javascript', function () {
     return gulp.src('scripts/*.js')
@@ -91,7 +96,7 @@ gulp.task('browser-sync', function() {
 gulp.task('default', ['build'], function() {
     gulp.start('browser-sync');
     gulp.watch('./scss/*.scss', ['build-sass']).on('change', bs.reload);
-    gulp.watch('./img/', ['read-images', 'build-javascript'])on('change', bs.reload);
+    gulp.watch('./img/', ['read-images', 'build-javascript']).on('change', bs.reload);
     gulp.watch('*.html', ['html']).on('change', bs.reload);
     gulp.watch('*/*.js', ['build-javascript']).on('change', bs.reload);
 })

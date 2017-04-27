@@ -40,7 +40,8 @@ html {
 body {
   background-color: #FFE9BE;
   display: table-cell;
-  vertical-align: middle; }
+  vertical-align: middle;
+  text-align: center; }
 
 header {
   width: 500px; }
