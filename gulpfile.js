@@ -22,9 +22,9 @@ gulp.task('build-dist', function (callback) {
         'build-clean',
         ['build-sass', 'read-images'],
         ['images-copy', 'fonts-copy', 'build-javascript', 'html'],
+        ['dist-copy'],
         callback
-    ).
-    pipe(gulp.dest('./dist'));
+    )
 });
 
 gulp.task('build-clean', function () {
@@ -83,6 +83,11 @@ gulp.task('build-javascript', function () {
 gulp.task('html', function () {
     return gulp.src('index.html')
         .pipe(gulp.dest('./compiled'))
+})
+
+gulp.task('dist-copy', function () {
+    return gulp.src(['./compiled/**/*'])
+        .pipe(gulp.dest('./docs'));
 })
 
 gulp.task('browser-sync', function() {
