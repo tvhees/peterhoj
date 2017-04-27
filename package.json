@@ -1,11 +1,16 @@
 {
-    "name": "venndiagram",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC"
+  "name": "venndiagram",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-filenames": "^4.0.1",
+    "gulp-replace-task": "^0.11.0",
+    "run-sequence": "^1.2.2"
+  }
 }

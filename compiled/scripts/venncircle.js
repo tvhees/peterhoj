@@ -5,9 +5,9 @@ $(document).ready(function() {
     (function circles () {
         var that = this;
         that.elements = [];
-        that.folderstring = '@@folders';
+        that.folderstring = '["family","leadership","science","sports","wine"]';
         that.folders = eval(that.folderstring);
-        that.imagestring = '@@images';
+        that.imagestring = '[["easter-2017.jpg","family-trekking.jpg","peter-bodil.jpg","peter-mandy-0.jpg","peter-mandy-1.jpg","peter-torbjorn.jpg"],["peter-unisa.jpg","turnbull-modhi-2017.jpg"],["gel-electrophoresis.png","peter-latrobe.png","peter-nick-0.jpg","peter-nickh-1.jpg","peter-trevor.jpg"],["peter-bike.jpg","peter-road-sign.jpg"],["peter-vineyard.jpg","peter-wineglass.jpg"]]';
         that.images = eval(that.imagestring);
 
         function CreateCircle (item, properties) {

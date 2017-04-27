@@ -1,21 +1,21 @@
 @font-face {
   font-family: 'croissantOne';
-  src: url(../../fonts/CroissantOne-Regular.ttf);
+  src: url('../fonts/CroissantOne-Regular.ttf');
 }
 
 @font-face {
   font-family: 'blackout2am';
-  src: url(../../fonts/Blackout-2am.ttf);
+  src: url('../fonts/Blackout-2am.ttf');
 }
 
 @font-face {
   font-family: 'blackoutMidnight';
-  src: url(../../fonts/Blackout-Midnight.ttf);
+  src: url('../fonts/Blackout-Midnight.ttf');
 }
 
 @font-face {
   font-family: 'icomoon';
-  src:  url(../../fonts/icomoon.eot?1tib3l);
+  src:  url('../fonts/icomoon.eot?1tib3l');
   src:  url('../../fonts/icomoon.eot?1tib3l#iefix') format('embedded-opentype'),
     url('../../fonts/icomoon.ttf?1tib3l') format('truetype'),
     url('../../fonts/icomoon.woff?1tib3l') format('woff'),
@@ -53,8 +53,19 @@ $hoverScale: 1.2;
 $xOffset: 0.54 * $radius;
 $yOffset: 0.63 * $radius;
 
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
 body {
   background-color: $colorBackground;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 header {
