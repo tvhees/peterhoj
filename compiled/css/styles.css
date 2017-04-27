@@ -13,7 +13,7 @@
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?1tib3l");
-  src: url("../../fonts/icomoon.eot?1tib3l#iefix") format("embedded-opentype"), url("../../fonts/icomoon.ttf?1tib3l") format("truetype"), url("../../fonts/icomoon.woff?1tib3l") format("woff"), url("../../fonts/icomoon.svg?1tib3l#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?1tib3l#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?1tib3l") format("truetype"), url("../fonts/icomoon.woff?1tib3l") format("woff"), url("../fonts/icomoon.svg?1tib3l#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
