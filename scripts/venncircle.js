@@ -11,19 +11,27 @@ $(document).ready(function() {
         that.images = eval(that.imagestring);
 
         function CreateCircle (item, properties) {
-            var circle = this;
-            circle.index = 0;
-            circle.item = item;
-            circle.folder = properties.folder;
-            circle.images = properties.images;
+            var folder, images,
+                circle = this,
+                index = 0;
+            folder = properties.folder;
+            images = properties.images;
+
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min;
+            }
+
+            index = getRandomInt(0, images.length);
 
             circle.NextImage = function () {
-                circle.index++;
-                if(circle.index >= circle.images.length) {
-                    circle.index = 0;
+                index++;
+                if(index >= images.length) {
+                    index = 0;
                 }
 
-                circle.item.attr('src', 'img/' + circle.folder + '/' + circle.images[circle.index]);
+                item.attr('src', 'img/' + folder + '/' + images[index]);
             };
         }
 
